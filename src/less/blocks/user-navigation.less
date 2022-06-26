@@ -1,0 +1,38 @@
+.user-navigation
+
+.user-navigation__list {
+  list-style: none;
+  padding: 0;
+}
+
+.user-navigation__item {}
+
+.user-navigation__button {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  text-transform: uppercase;
+  font-size: 12px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  background-color: @base-white;
+
+  @media (min-width: @desktop-width) {
+    min-width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
+}
+
+.user-navigation__icon {
+  padding: 8px;
+}
+
+.user-navigation__text {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: block;
+  }
+}

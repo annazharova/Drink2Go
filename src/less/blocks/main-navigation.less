@@ -1,0 +1,39 @@
+.main-navigation {}
+
+.main-navigation__list {
+  list-style: none;
+  padding: 0;
+}
+
+.main-navigation__item {
+
+}
+
+.main-navigation__logo {
+  background-color: @base-white;
+  padding: 12px 20px;
+  width: 32px;
+  height: 36px;
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    width: 82px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 170px;
+  }
+}
+
+.main-navigation__link {
+  text-decoration: none;
+  color: @base-black;
+  background-color: @base-white;
+  font-weight: 500;
+  width: 320px;
+  height: 57px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}

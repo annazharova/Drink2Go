@@ -15,7 +15,30 @@
   </head>
   <body class="page__body">
     <header class="header">
-      <nav class="main-navigation">
+      <nav class="user-navigation">
+        <ul class="user-navigation__list">
+          <li class="user-navigation__item">
+            <button class="user-navigation__button" type="button">
+              <svg class="user-navigation__icon" width="16" height="16">
+                <use href="img/icons/sprite.svg#user"></use>
+              </svg>
+              <span class="user-navigation__text">Войти</span>
+            </button>
+          </li>
+          <li class="user-navigation__item">
+            <button class="user-navigation__button" type="button">
+              <svg class="user-navigation__icon" width="16" height="16">
+                <use href="img/icons/sprite.svg#cart"></use>
+              </svg>
+              <span class="user-navigation__text">Корзина</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+      <nav class="main-navigation main-navigation--closed main-navigation--nojs">
+        <button class="main-navigation__toggle" type="button">
+          <span class="visually-hidden">Закрыть меню</span>
+        </button>
         <ul class="main-navigation__list">
           <li class="main-navigation__item">
             <a class="main-navigation__logo" href="index.html">
@@ -37,26 +60,6 @@
           </li>
           <li class="main-navigation__item">
             <a class="main-navigation__link" href="about.html">О нас</a>
-          </li>
-        </ul>
-      </nav>
-      <nav class="user-navigation">
-        <ul class="user-navigation__list">
-          <li class="user-navigation__item">
-            <button class="user-navigation__button" type="button">
-              <svg class="user-navigation__icon" width="16" height="16">
-                <use href="img/icons/sprite.svg#user"></use>
-              </svg>
-              <span class="user-navigation__text">Войти</span>
-            </button>
-          </li>
-          <li class="user-navigation__item">
-            <button class="user-navigation__button" type="button">
-              <svg class="user-navigation__icon" width="16" height="16">
-                <use href="img/icons/sprite.svg#cart"></use>
-              </svg>
-              <span class="user-navigation__text">Корзина</span>
-            </button>
           </li>
         </ul>
       </nav>
@@ -265,7 +268,12 @@
         </ul>
         <ul class="pagination">
           <li class="pagination__item">
-            <a class="pagination__link" href="#">Предыдущая</a>
+            <a class="pagination__link" href="#">
+              <svg class="pagination__img" width="6" height="10">
+                <use href="img/icons/sprite.svg#btn-left"></use>
+              </svg>
+              <span class="visually-hidden">Предыдущая</span>
+            </a>
           </li>
           <li class="pagination__item">
             <a class="pagination__link" href="#">1</a>
@@ -277,7 +285,12 @@
             <a class="pagination__link" href="#">3</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link" href="#">Следующая</a>
+            <a class="pagination__link" href="#">
+              <svg class="pagination__img" width="6" height="10">
+                <use href="img/icons/sprite.svg#btn-right"></use>
+              </svg>
+              <span class="visually-hidden">Следующая</span>
+            </a>
           </li>
         </ul>
       </section>

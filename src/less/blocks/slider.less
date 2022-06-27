@@ -1,4 +1,9 @@
-.slider {
+.slider {}
+
+.slider__item {
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
 }
 
 .slider__title {
@@ -22,4 +27,22 @@
 .slider__link {
   text-decoration: none;
   color: @base-black;
+  order: 3;
+}
+
+.slider__picture {
+  order: 1;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.slider__price-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  order: 4;
+}
+
+.slider__img {
+  margin: 0 auto;
+  display: block;
 }

@@ -1,4 +1,6 @@
-.main-navigation {}
+.main-navigation {
+  grid-column: 1 / -1;
+}
 
 .main-navigation--opened .main-navigation__toggle {
   background-color: transparent;
@@ -49,7 +51,7 @@
 }
 
 .main-navigation--nojs .main-navigation__toggle {
-  // display: none;
+  display: none;
 }
 
 .main-navigation--nojs {
@@ -68,6 +70,13 @@
 
 .main-navigation__item {
 
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid @base-secondary;
+  }
 }
 
 .main-navigation__logo {

@@ -15,6 +15,13 @@
   </head>
   <body class="page__body">
     <header class="header">
+      <a class="main-navigation__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+          <img class="main-navigation__logo-image" src="img/logo.svg" alt="Магазин Drink2Go">
+        </picture>
+      </a>
       <nav class="user-navigation">
         <ul class="user-navigation__list">
           <li class="user-navigation__item">
@@ -40,15 +47,6 @@
           <span class="visually-hidden">Закрыть меню</span>
         </button>
         <ul class="main-navigation__list">
-          <li class="main-navigation__item">
-            <a class="main-navigation__logo" href="index.html">
-              <picture>
-                <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
-                <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-                <img class="main-navigation__logo-image" src="img/logo.svg" alt="Магазин Drink2Go">
-              </picture>
-            </a>
-          </li>
           <li class="main-navigation__item">
             <a class="main-navigation__link" href="index.html">Главная</a>
           </li>
@@ -381,5 +379,6 @@
           <use href="img/icons/sprite.svg#htmlacademy"></use>
         </svg>
     </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>

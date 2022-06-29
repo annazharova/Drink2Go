@@ -1,4 +1,12 @@
-.filter {}
+.filter {
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
+}
+
+.filter .price {
+  // grid-column: 1 / -1;
+  // margin: 0 auto;
+}
 
 .filter__button {
   width: 280px;
@@ -7,12 +15,14 @@
   color: @base-primary;
   margin-top: 30px;
   margin-bottom: 30px;
+  // grid-column: 1 / -1;
 }
 
 .filter__group {
   border: none;
   padding: 0;
   margin: 0;
+  display: flex;
 }
 
 .filter__title {

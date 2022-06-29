@@ -3,7 +3,7 @@
 .slider__item {
   display: flex;
   flex-direction: column;
-  // align-items: center;
+  justify-content: center;
 }
 
 .slider__title {
@@ -32,16 +32,24 @@
   order: 3;
 }
 
+.slider__link .text {
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .slider__picture {
   order: 1;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-.slider__price-wrapper {
+.slider__wrapper {
   display: flex;
   justify-content: space-evenly;
   order: 4;
+  min-width: 280px;
+  margin: 0 auto;
 }
 
 .slider__img {

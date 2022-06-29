@@ -47,9 +47,7 @@
         </ul>
       </nav>
       <nav class="main-navigation main-navigation--closed main-navigation--nojs">
-        <button class="main-navigation__toggle" type="button">
-          <span class="visually-hidden">Закрыть меню</span>
-        </button>
+        <button class="main-navigation__toggle" type="button" aria-label="Открыть меню"></button>
         <ul class="main-navigation__list">
           <li class="main-navigation__item">
             <a class="main-navigation__link" href="index.html">Главная</a>
@@ -86,9 +84,11 @@
                 <img class="slider__img" src="img/slider/flat_white.png" srcset="img/slider/flat_white@2x.png 2x" width="280" height="280" alt="">
               </picture>
             </a>
-            <div class="slider__price-wrapper">
-              <span class="old-price">295₽</span>
-              <span class="price">225₽</span>
+            <div class="slider__wrapper">
+              <div>
+                <span class="old-price">295₽</span>
+                <span class="price">225₽</span>
+              </div>
               <button class="button" type="button">Заказать</button>
             </div>
           </article>
@@ -107,9 +107,11 @@
                 <img class="slider__img" src="img/slider/lavender.png" srcset="img/slider/lavender@2x.png 2x" width="280" height="280" alt="">
               </picture>
             </a>
-            <div class="slider__price-wrapper">
-              <span class="old-price">285₽</span>
-              <span class="price">265₽</span>
+            <div class="slider__wrapper">
+              <div>
+                <span class="old-price">285₽</span>
+                <span class="price">265₽</span>
+              </div>
               <button class="button" type="button">Заказать</button>
             </div>
           </article>
@@ -128,9 +130,11 @@
                 <img class="slider__img" src="img/slider/espresso.png" srcset="img/slider/espresso@2x.png 2x" width="280" height="280" alt="">
               </picture>
             </a>
-            <div class="slider__price-wrapper">
-              <span class="old-price">395₽</span>
-              <span class="price">375₽</span>
+            <div class="slider__wrapper">
+              <div>
+                <span class="old-price">395₽</span>
+                <span class="price">375₽</span>
+              </div>
               <button class="button" type="button">Заказать</button>
             </div>
           </article>
@@ -166,25 +170,21 @@
         <h3 class="visually-hidden">Фильтр</h3>
 
         <form action="https://echo.htmlacademy.ru/courses" method="post" class="filter">
-          <fieldset class="filter__group">
+          <fieldset class="filter__group price">
             <legend class="filter__title">Цена</legend>
             <div class="range">
               <div class="range__scale">
                 <div class="range__bar">
-                  <button class="range__toggle toggle-min">
-                    <span class="visually-hidden">Изменить минимальную цену.</span>
-                  </button>
-                  <button class="range__toggle toggle-max">
-                    <span class="visually-hidden">Изменить максимальную цену.</span>
-                  </button>
+                  <button class="range__toggle toggle-min" aria-label="Изменить минимальную цену"></button>
+                  <button class="range__toggle toggle-max" aria-label="Изменить максимальную цену"></button>
                 </div>
               </div>
               <div class="range__wrapper">
                 <label class="filter__label">
-                  <input class="range__input" type="number" value="0" name="min-price"><span class="visually-hidden">от</span>
+                  <input class="range__input" type="number" value="0" name="min-price" aria-label="минимальная цена">
                 </label>
                 <label class="filter__label">
-                  <input class="range__input" type="number" value="900" name="max-price"><span class="visually-hidden">до</span>
+                  <input class="range__input" type="number" value="900" name="max-price" aria-label="максимальная цена цена">
                 </label>
               </div>
             </div>
@@ -268,7 +268,6 @@
             <option value="cheap">сначала дешёвые</option>
             <option value="rate">высокий рейтинг</option>
           </select>
-
         </form>
 
         <ul class="catalog__list">
@@ -392,11 +391,10 @@
         </ul>
         <ul class="pagination">
           <li class="pagination__item">
-            <a class="pagination__link" href="#">
+            <a class="pagination__link" href="#" aria-label="Предыдущая">
               <svg class="pagination__img" width="6" height="10">
                 <use href="img/icons/sprite.svg#btn-left"></use>
               </svg>
-              <span class="visually-hidden">Предыдущая</span>
             </a>
           </li>
           <li class="pagination__item">
@@ -409,11 +407,10 @@
             <a class="pagination__link" href="#">3</a>
           </li>
           <li class="pagination__item">
-            <a class="pagination__link" href="#">
+            <a class="pagination__link" href="#" aria-label="Следующая">
               <svg class="pagination__img" width="6" height="10">
                 <use href="img/icons/sprite.svg#btn-right"></use>
               </svg>
-              <span class="visually-hidden">Следующая</span>
             </a>
           </li>
         </ul>
@@ -432,22 +429,25 @@
           </a>
           <ul class="social">
             <li class="social__item">
-              <svg class="academy-img" width="20" height="20">
-                <use href="img/icons/sprite.svg#vk"></use>
-              </svg>
-              <span class="visually-hidden">ВКонтакте</span>
+              <a href="#" aria-label="ВКонтакте">
+                <svg class="academy-img" width="20" height="20">
+                  <use href="img/icons/sprite.svg#vk"></use>
+                </svg>
+              </a>
             </li>
             <li class="social__item">
-              <svg class="academy-img" width="22" height="22">
-                <use href="img/icons/sprite.svg#pinterest"></use>
-              </svg>
-              <span class="visually-hidden">Пинтерест</span>
+              <a href="#" aria-label="Пинтерест">
+                <svg class="academy-img" width="22" height="22">
+                  <use href="img/icons/sprite.svg#pinterest"></use>
+                </svg>
+              </a>
             </li>
             <li class="social__item">
-              <svg class="academy-img" width="20" height="20">
-                <use href="img/icons/sprite.svg#ok"></use>
-              </svg>
-              <span class="visually-hidden">Одноклассники</span>
+              <a href="#" aria-label="Одноклассники">
+                <svg class="academy-img" width="20" height="20">
+                  <use href="img/icons/sprite.svg#ok"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>

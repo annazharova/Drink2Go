@@ -143,18 +143,26 @@
       <section class="advantages">
       <span class="badge">Преимущества</span>
       <h2 class="subtitle">Главные причины выбрать Drink2Go</h2>
+        <section class="advantages__item">
         <h3 class="advantages__title speed">Скорость</h3>
           <p class="text">Готовый напиток всегда под рукой — просто открой банку</p>
+      </section>
+          <section class="advantages__item">
         <h3 class="advantages__title fit">Удобство</h3>
           <p class="text">Легко помещается и в карман, и в маленькую сумочку</p>
+        </section>
+          <section class="advantages__item">
         <h3 class="advantages__title energy">Бодрость</h3>
           <p class="text">Сбалансированная доза кофеина даст мощный заряд энергии</p>
+        </section>
+          <section class="advantages__item">
         <h3 class="advantages__title eco">Экологичность</h3>
           <p class="text">Вся упаковка сделана из перерабатываемых материалов</p>
+        </section>
       </section>
+      <section class="catalog container">
       <span class="badge">Каталог</span>
       <h2 class="subtitle">Каталог кофейных напитков</h2>
-      <section class="catalog container">
         <h3 class="visually-hidden">Фильтр</h3>
 
         <form action="https://echo.htmlacademy.ru/courses" method="post" class="filter">
@@ -416,7 +424,7 @@
       <h2 class="visually-hidden">Наши контакты</h2>
       <h3 class="visually-hidden">Карта</h3>
       <div class="map" id="map" aria-label="Санкт-Петербург, набережная реки Карповки, дом 5"></div>
-      <section class="footer__section">
+      <section class="footer__section container">
         <h3 class="visually-hidden">Мы в социальных сетях</h3>
         <div class="footer__wrapper-social">
           <a class="footer__logo" href="index.html">
@@ -444,7 +452,7 @@
           </ul>
         </div>
       </section>
-        <nav class="footer-navigation">
+        <nav class="footer-navigation container">
           <h4 class="footer__subtitle">Интернет-магазин</h4>
             <ul class="footer__list">
               <li class="footer__item">
@@ -461,7 +469,7 @@
               </li>
             </ul>
         </nav>
-        <section class="footer__section">
+        <section class="footer__section container">
           <h4 class="footer__subtitle">Медиа</h4>
             <ul class="footer__list">
               <li class="footer__item">
@@ -475,23 +483,32 @@
               </li>
             </ul>
         </section>
-        <section class="footer__section">
+        <section class="footer__section container">
           <h4 class="footer__subtitle">Контакты</h4>
-          <svg class="footer__address-img" width="13" height="16">
-            <use href="img/icons/sprite.svg#address"></use>
-          </svg>
-          <p class="footer__address">Санкт-Петербург, набережная реки Карповки, дом 5</p>
-          <svg class="footer__tel-img" width="13" height="16">
-            <use href="img/icons/sprite.svg#phone"></use>
-          </svg>
-          <p class="footer__address">
-            <a class="footer__tel" href="tel:+79999999999">+7 (999) 999-99-99</a>
-          </p>
+          <div class="footer__address-container">
+            <svg class="footer__address-img" width="13" height="16">
+              <use href="img/icons/sprite.svg#address"></use>
+            </svg>
+            <p class="footer__address">Санкт-Петербург, набережная реки Карповки, дом 5</p>
+          </div>
+          <div class="footer__address-container">
+            <svg class="footer__tel-img" width="13" height="16">
+              <use href="img/icons/sprite.svg#phone"></use>
+            </svg>
+            <p class="footer__address">
+              <a class="footer__tel" href="tel:+79999999999">+7 (999) 999-99-99</a>
+            </p>
+          </div>
         </section>
-        <p class="copyright">Разработано в HTML Academy</p>
-        <svg class="footer__academy-img" width="12" height="16">
-          <use href="img/icons/sprite.svg#htmlacademy"></use>
-        </svg>
+        <div class="academy">
+          <p class="academy__text">Разработано в
+            <a class="academy__link" href="https://htmlacademy.ru/intensive/adaptive"> HTMLAcademy. 
+              <svg class="academy__img" width="12" height="16">
+                <use href="img/icons/sprite.svg#htmlacademy"></use>
+              </svg>
+            </a>
+          </p>
+        </div>
     </footer>
     <script src="js/script.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>

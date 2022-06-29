@@ -16,11 +16,11 @@
   </head>
   <body class="page__body">
     <header class="header">
-      <a class="main-navigation__logo" href="index.html">
+      <a class="header__logo" href="index.html">
         <picture>
           <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img class="main-navigation__logo-image" src="img/logo.svg" alt="Магазин Drink2Go">
+          <img class="header__logo-image" src="img/logo.svg" alt="Магазин Drink2Go">
         </picture>
       </a>
       <nav class="user-navigation">
@@ -137,7 +137,6 @@
       <div class="swiper-button-prev"></div>
     </div>
 
-
       <section class="advantages">
       <span class="badge">Преимущества</span>
       <h2 class="subtitle">Главные причины выбрать Drink2Go</h2>
@@ -152,27 +151,115 @@
       </section>
       <span class="badge">Каталог</span>
       <h2 class="subtitle">Каталог кофейных напитков</h2>
-      <section class="catalog">
+      <section class="catalog container">
         <h3 class="visually-hidden">Фильтр</h3>
-        Цена
-        0 900
-        Наличие молока
-        Неважно
-        Только животное
-        Только растительное
-        Без молока
-        Страна произрастания
-        Бразилия
-        Эфиопия
-        Колумбия
-        Коста-Рика
-        Перу
-        <button class="button form__button" type="button">Сбросить фильтр</button>
-        Сортировка
-        По умолчанию
-        Сначала дорогие
-        Сначала дешёвый
-        Высокий рейтинг
+
+        <form action="https://echo.htmlacademy.ru/courses" method="post" class="filter">
+          <fieldset class="filter__group">
+            <legend class="filter__title">Цена</legend>
+            <div class="range">
+              <div class="range__scale">
+                <div class="range__bar">
+                  <button class="range__toggle toggle-min">
+                    <span class="visually-hidden">Изменить минимальную цену.</span>
+                  </button>
+                  <button class="range__toggle toggle-max">
+                    <span class="visually-hidden">Изменить максимальную цену.</span>
+                  </button>
+                </div>
+              </div>
+              <div class="range__wrapper">
+                <label class="filter__label">
+                  <input class="range__input" type="number" value="0" name="min-price"><span class="visually-hidden">от</span>
+                </label>
+                <label class="filter__label">
+                  <input class="range__input" type="number" value="900" name="max-price"><span class="visually-hidden">до</span>
+                </label>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset class="filter__group">
+            <legend class="filter__title">Наличие молока</legend>
+            <ul class="filter__list">
+              <li class="filter__item">
+                <label class="custom-radio">
+                  <input type="radio" name="milk" value="no-matter" checked>
+                  <span class="text">Неважно</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="custom-radio">
+                  <input type="radio" name="milk" value="animal">
+                  <span class="text">Только животное</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="custom-radio">
+                  <input type="radio" name="milk" value="plant">
+                  <span class="text">Только растительное</span>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="custom-radio">
+                  <input type="radio" name="milk" value="without" disabled>
+                  <span class="text">Без молока</span>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <fieldset class="filter__group">
+            <legend class="filter__title">Страна произрастания</legend>
+            <ul class="filter__list">
+              <li class="filter__item">
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="Brazil" checked>
+                  <span></span>
+                  <p class="text">Бразилия</p>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="Ethiopia">
+                  <span></span>
+                  <p class="text">Эфиопия</p>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="Colombia">
+                  <span></span>
+                  <p class="text">Колумбия</p>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="Costa-Rica">
+                  <span></span>
+                  <p class="text">Коста-Рика</p>
+                </label>
+              </li>
+              <li class="filter__item">
+                <label class="custom-checkbox">
+                  <input type="checkbox" name="Peru" disabled>
+                  <span></span>
+                  <p class="text">Перу</p>
+                </label>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="button filter__button" type="reset">Сбросить фильтр</button>
+        </form>
+        <form class="sort">
+          <label class="sort__label" for="sorting">Сортировка:</label>
+          <select class="sort__control" id="sorting" name="sorting">
+            <option value="default">по умолчанию</option>
+            <option value="expensive">сначала дорогие</option>
+            <option value="cheap">сначала дешёвые</option>
+            <option value="rate">высокий рейтинг</option>
+          </select>
+
+        </form>
+
         <ul class="catalog__list">
           <li class="catalog-item">
             <a class="catalog-item__link" href="flat-white.html">

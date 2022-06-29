@@ -3,3 +3,19 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
+.header__logo {
+  background-color: @base-white;
+  padding: 12px 20px;
+  width: 32px;
+  height: 36px;
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    width: 82px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 170px;
+  }
+}

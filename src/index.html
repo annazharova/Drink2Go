@@ -13,6 +13,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+   crossorigin=""/>
   </head>
   <body class="page__body">
     <header class="header">
@@ -412,11 +415,7 @@
     <footer class="footer">
       <h2 class="visually-hidden">Наши контакты</h2>
       <h3 class="visually-hidden">Карта</h3>
-      <picture>
-        <source media="(min-width: 1440px)" srcset="img/map_bg-desktop.png">
-        <source media="(min-width: 768px)" srcset="img/map_bg-tablet.png">
-        <img class="map-img" src="img/map_bg.png" width="320" height="420" alt="Санкт-Петербург, набережная реки Карповки, дом 5">
-      </picture>
+      <div class="map" id="map" aria-label="Санкт-Петербург, набережная реки Карповки, дом 5"></div>
       <section class="footer__section">
         <h3 class="visually-hidden">Мы в социальных сетях</h3>
         <div class="footer__wrapper-social">
@@ -497,5 +496,9 @@
     <script src="js/script.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/swiper.js"></script>
+    <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+    integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+    crossorigin=""></script>
+    <script src="js/map.js"></script>
   </body>
 </html>

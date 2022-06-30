@@ -4,6 +4,31 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    min-height: 828px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-height: 714px;
+    display: grid;
+    grid-template-columns: 720px 720px;
+    grid-template-rows: 10fr max-content 13fr;
+  }
+}
+
+.slider__item .badge {
+  order: 2;
+
+  @media (min-width: @tablet-width) {
+    order: 1;
+    padding-top: 60px;
+  }
+  @media (min-width: @desktop-width) {
+    grid-column: 2 / -1;
+    align-items: end;
+    justify-content: start;
+  }
 }
 
 .slider__title {
@@ -30,18 +55,53 @@
   text-decoration: none;
   color: @base-black;
   order: 3;
+
+  @media (min-width: @tablet-width) {
+    order: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2 / -1;
+  }
 }
 
 .slider__link .text {
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: @tablet-width) {
+    max-width: 600px;
+    font-size: 20px;
+    line-height: 32px;
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: left;
+    margin-left: 0;
+  }
 }
 
 .slider__picture {
   order: 1;
   padding-top: 20px;
   padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    order: 4;
+    z-index: 2;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+  }
+}
+
+.slider__picture picture {
+  width: 100%;
+  height: auto;
+  display: inline-flex;
 }
 
 .slider__wrapper {
@@ -50,9 +110,47 @@
   order: 4;
   min-width: 280px;
   margin: 0 auto;
+  padding-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    order: 3;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2 / -1;
+    align-items: start;
+    margin-left: 0;
+    justify-content: space-between;
+    min-width: 230px;
+  }
 }
 
 .slider__img {
   margin: 0 auto;
   display: block;
+  width: 100%;
+  height: auto;
+  max-width: 476px;
+
+  @media (min-width: @tablet-width) {
+    max-width: 600px;
+  }
+}
+
+.slider__rectangle {
+  display: none;
+
+  @media (min-width: @tablet-width) {
+    height: 188px;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
+    position: absolute;
+    bottom: 0;
+    display: block;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: none;
+  }
 }

@@ -2,6 +2,17 @@
   background-color: @base-white;
   display: grid;
   grid-template-columns: 1fr 1fr;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: min-content 1fr min-content;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 80px;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+  }
 }
 
 .header__logo {
@@ -16,6 +27,30 @@
   }
 
   @media (min-width: @desktop-width) {
-    width: 170px;
+    width: 316px;
+    text-decoration: none;
+    color: @base-black;
+  }
+}
+
+.header__logo .text {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  font-size: 1px;
+
+  @media (min-width: @desktop-width) {
+    position: unset;
+    clip: unset;
+    width: unset;
+    height: unset;
+    margin: unset;
+    margin: 0;
+    padding-left: 20px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: left;
   }
 }

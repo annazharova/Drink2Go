@@ -1,6 +1,6 @@
 .catalog-item {
   background-color: @base-white;    width: 280px;
-  height: 420px;
+  min-height: 420px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -9,6 +9,18 @@
   padding-right: 20px;
   box-sizing: border-box;
   margin-bottom: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 349px;
+    min-height: 440px;
+    padding: 50px 30px 30px;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 317px;
+    min-height: 460px;
+  }
 }
 
 .catalog-item__title {
@@ -26,6 +38,10 @@
 .catalog-item__link {
   text-decoration: none;
   color: @base-black;
+}
+
+.catalog-item__link .text {
+  text-align: left;
 }
 
 .catalog-item__cart {

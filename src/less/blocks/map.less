@@ -3,11 +3,14 @@
   background-repeat: no-repeat;
   background-size: 100%;
   width: 100%;
-  height: 420px;
+  min-height: 420px;
+  height: auto;
+  display: inline-flex;
+  background-position: center;
 
   @media (min-width: @tablet-width) {
     background-image: url("../img/map_bg-tablet.png");
-    height: 480px;
+    min-height: 480px;
   }
 
   @media (min-width: @desktop-width) {

@@ -1,13 +1,21 @@
-.user-navigation {}
+.user-navigation {
+  @media (min-width: @tablet-width) {
+    grid-column: -1 / 3;
+  }
+}
 
 .user-navigation__list {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-  justify-content: end;
+  justify-content: flex-end;
   flex-direction: row;
   margin-right: 60px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 0;
+  }
 }
 
 .user-navigation__item {

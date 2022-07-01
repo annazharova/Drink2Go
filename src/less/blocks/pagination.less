@@ -71,8 +71,10 @@
   justify-content: center;
   align-items: center;
   background-color: @base-white;
+  border-radius: 4px;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: @primary-lighter;
     color: @base-white;
   }
@@ -84,6 +86,19 @@
 
   &:disabled {
     background-color: @base-grey;
+    color: @base-white;
+  }
+
+  &:hover .text,
+  &:focus .text {
+    color: @base-white;
+  }
+
+  &:active .text {
+    color: @base-white;
+  }
+
+  &:disabled .text {
     color: @base-white;
   }
 }

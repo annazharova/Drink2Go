@@ -57,12 +57,28 @@
   align-items: center;
 }
 
-.social__item a {
+.social__link {
   width: 40px;
   height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
+  border-radius: 4px;
+  fill: @base-grey;
+
+  &:hover,
+  &:focus {
+    background-color: @base-secondary;
+  }
+
+  &:hover .social__img,
+  &:focus .social__img {
+    fill: @base-primary;
+  }
+
+  &:active {
+    background-color: @primary-opacity;
+  }
 }
 
 .social__wrapper {

@@ -7,6 +7,14 @@
   }
 }
 
+.main-navigation__toggle {
+  background-color: white;
+
+  &:active {
+    background-color: @base-secondary;
+  }
+}
+
 .main-navigation--opened .main-navigation__toggle {
   background-color: transparent;
   border: none;
@@ -27,7 +35,6 @@
 }
 
 .main-navigation--closed .main-navigation__toggle {
-  background-color: transparent;
   border: none;
   display: block;
   position: absolute;
@@ -71,6 +78,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
+  height: 100%;
 
   @media (min-width: @tablet-width) {
     display: grid;
@@ -110,7 +118,34 @@
   text-transform: uppercase;
   margin: 0 auto;
 
+  &:active {
+    background-color: @base-secondary;
+  }
+
   @media (min-width: @tablet-width) {
+    padding-left: 20px;
+    padding-right: 20px;
+    height: 100%;
+    box-sizing: border-box;
     width: fit-content;
+
+    &:hover,
+    &:focus {
+      color: @base-primary;
+    }
+
+    &:active {
+      background-color: @base-secondary;
+    }
+
+    &:disabled {
+      color: @base-white;
+    }
+  }
+}
+
+.main-navigation__current {
+  @media (min-width: @tablet-width) {
+    border-bottom: 2px solid @base-primary;
   }
 }

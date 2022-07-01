@@ -36,6 +36,25 @@
   color: @base-grey;
   display: flex;
   align-items: center;
+  fill: @base-grey;
+
+  &:hover,
+  &:focus {
+    color: @base-primary;
+  }
+
+  &:hover .academy__img,
+  &:focus .academy__img {
+    fill: @base-primary;
+  }
+
+  &:active {
+    color: @primary-darker;
+  }
+
+  &:active .academy__img {
+    fill: @primary-darker;
+  }
 }
 
 .academy__img {

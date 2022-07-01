@@ -13,9 +13,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.css"/>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
    integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
    crossorigin=""/>
+   <!-- <link href="nouislider.css" rel="stylesheet"> -->
   </head>
   <body class="page__body">
       <div class="header-wrapper">
@@ -182,10 +184,7 @@
             <legend class="filter__title">Цена</legend>
             <div class="range">
               <div class="range__scale">
-                <div class="range__bar">
-                  <button class="range__toggle toggle-min" aria-label="Изменить минимальную цену"></button>
-                  <button class="range__toggle toggle-max" aria-label="Изменить максимальную цену"></button>
-                </div>
+                <div id="slider"></div>
               </div>
               <div class="range__wrapper">
                 <label class="filter__label">
@@ -233,35 +232,35 @@
                 <label class="custom-checkbox">
                   <input type="checkbox" name="Brazil" checked>
                   <span></span>
-                  <p class="text">Бразилия</p>
+                  <i class="custom-checkbox__text">Бразилия</i>
                 </label>
               </li>
               <li class="filter__item">
                 <label class="custom-checkbox">
                   <input type="checkbox" name="Ethiopia">
                   <span></span>
-                  <p class="text">Эфиопия</p>
+                  <i class="custom-checkbox__text">Эфиопия</i>
                 </label>
               </li>
               <li class="filter__item">
                 <label class="custom-checkbox">
                   <input type="checkbox" name="Colombia">
                   <span></span>
-                  <p class="text">Колумбия</p>
+                  <i class="custom-checkbox__text">Колумбия</i>
                 </label>
               </li>
               <li class="filter__item">
                 <label class="custom-checkbox">
                   <input type="checkbox" name="Costa-Rica">
                   <span></span>
-                  <p class="text">Коста-Рика</p>
+                  <i class="custom-checkbox__text">Коста-Рика</i>
                 </label>
               </li>
               <li class="filter__item">
                 <label class="custom-checkbox">
                   <input type="checkbox" name="Peru" disabled>
                   <span></span>
-                  <p class="text">Перу</p>
+                  <i class="custom-checkbox__text">Перу</i>
                 </label>
               </li>
             </ul>
@@ -524,12 +523,14 @@
         </div>
     </footer>
   </div>
-    <script src="js/script.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="js/swiper.js"></script>
     <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
     integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
     crossorigin=""></script>
+    <script src="js/script.js"></script>
+    <script src="js/swiper.js"></script>
     <script src="js/map.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.6.0/nouislider.min.js"></script>
+    <script src="js/nouislider.js"></script>
   </body>
 </html>
